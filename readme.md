@@ -1,9 +1,9 @@
 # FTX Indicator analysis part 1
 
-An Investigation into Technical Indicators
-Tom Rae
+## An Investigation into Technical Indicators
+### Tom Rae
 
-Introduction
+## Introduction
 
 Technical Analysis. A google search of technical indicators shows a total of 298,000,000m results
 
@@ -54,70 +54,27 @@ We train a simple XGBOOSTmodel with no technical indicators. We are using a forw
 Analysis
 - We now extract our technical indicators for all of our data. We have a total of 72 available technical indicators. These include the common and well-known indicators such as exponential moving average, Bollinger Bands and MACD.
 - One approach for determining the importance of a variable is to use a train and machine learning model and then determine how important the model finds each feature. Another is an approach known as principal component analysis. Principal component analysis effectively plots a relationship between a target variable and a dependent variable.
-We will use an XGBoost model as it has proven effective at predicting timeseries data. (Reference)
-
-
-Market
-RMSE Without indicators
-RMSE With indicators
-DEFI-PERP
-14.950568
-13.415008
-KNC-PERP
-0.007628
-0.006836
-RUNE-PERP
-0.003248
-0.002419
-DMG-PERP
-0.004093
-0.004073
-COMP-PERP
-1.238425
-1.116247
-MKR-PERP
-3.89631
-3.855443
-TOM-PERP
-0.003202
-0.003171
-CUSDT-PERP
-0.004226
-0.004226
-BAL-PERP
-0.091891
-0.079668
+We will use an XGBoost model as it has proven effective at predicting timeseries data. 
 
 
 
 We can see that the inclusion of the technical indicators improves the RMSE accuracy of ourmodel. We can plainly see that when we include the indicators into our model, we get a lower RMSE, and therefore our prediction error for the next step is much lower than when we do not  include in the technical indicators.  
 
+![image](./imgs/results.png)
 We can therefore see how much each indicator impacts our model and so our next step is to use these models to give us an idea of how much importance our models assigns to each indicator to make its predictions.
+![image](./imgs/Feature_importance_of_Technical_indicators.png)
+Then we can rank our technical indicatorsi. To get an idea of what indicators are most valuable across all of our markets, we will create an average for each indicator for each market. We can then rank this. Across all of our market to give us the top ten most import indicators for our markets as so;
+![image](./imgs/TopTenIndicators.png)
 
 
-
-
-
-
-
-
-
-
-
-
-
--Then we can rank our technical indicators;
-# To get an idea of what indicators are most valuable across all of our markets, we will create an average for each indicator for each market. We can then rank this. Across all of our market to give us the top ten most import indicators for our markets as so;
-
-
-Conclusion.
+# Conclusion
 Perhaps surprisingly, our algorithm was able to draw the most information from the Open price, and this is by a considerable margin. It is reassuring to spot Bollinger Bands lower, and Middle. As due to the renowned nature of the author. (and his uncannily accurate predictions). The other indicators which our algorithm used to score better than default were; trend_cii, trend_ichimoku_conv, trend_sma_fast, volume adi, volume nvi, and volume vwap.
 Many of the indicators gave our model no additional power to predict the next step. However this does not mean that the indicators are not valid over longer time frames. This quite a limited small sample of data. Some indicators did give our model a better chance of predicting the best step.
 
 Further documentation on the libraries used and referenced can be found here;
 https://github.com/bukosabino/ta
 
-Next Steps
+# Next Steps
 ## Reinforcement Learning
 Though machine learning has actually been around for decades, it is only in recent times that computational power has caught up to the point that that we are able to implement the algorithms with ease. The prevalence and spread of technology helps this of course.
 
