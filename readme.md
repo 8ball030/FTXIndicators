@@ -45,6 +45,7 @@ Data Ingestion/Gathering
 Process
 We will first perform a quick examination of our data, we can see that over the 71 markets which we have collected, we have a number of bull bear markets. We will be focusing on perpetual futures leaving us with a remaining 9 markets, 'DEFI-PERP', 'KNC-PERP', 'RUNE-PERP', 'DMG-PERP', 'COMP-PERP', 'MKR-PERP', 'TOMO-PERP', 'BAL-PERP', 'CUSDT-PERP'.
 Plotting a market gives us;
+![image](./imgs/normalised_ts.png)
 
 Now we have taken care of our data collection and ingestion, we will begin our analysis. 
 
