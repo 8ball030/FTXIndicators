@@ -28,7 +28,7 @@ Time series data presents a number of difficulties in classifying for a number o
 
 - Noise is a feature inherent in data trading datasets and will be particularly pronounced for illiquid markets
 
-![image](/home/tom/Desktop/Medium/indicator_series/part_1/imgs/pattern_matching.png)
+![image](./imgs/pattern_matching.png)
 
 
 The author would argue that the application of these methods is simply a means for us, as visually and pattern-oriented agents, to process these complex patterns and help to reduce the impact of these issues in a manner which helps to highlight patterns within multi-dimensional data.
